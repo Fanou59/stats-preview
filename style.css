@@ -1,0 +1,301 @@
+/* ************************** Variables *************************** */
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading-stats: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-heading: hsla(0, 0%, 100%, 0.6);
+    font-size: 15px;
+}
+
+/* ************************ CSS RESET *************************** */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ************************************** CSS project *********************** */
+
+/* *************************** Global ******************** */
+
+html {
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 375px;
+    min-height: 100vh;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    max-width: 327px;
+
+}
+
+
+/* overlay */
+.overlay {
+    position: relative;
+    width: 100%;
+}
+
+img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.purple {
+    background-color: #AB5CDB;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+
+}
+
+
+/* ******************* Main and Text ********************* */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 31px;
+    padding-right: 31px;
+}
+
+
+
+
+
+h1 {
+    font-family: "Inter";
+    font-size: 1.86em;
+    font-weight: 700;
+    color: var(--main-heading-stats);
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 40px;
+    line-height: 32px;
+}
+
+span {
+    color: var(--accent);
+}
+
+p {
+    font-family: "inter";
+    font-weight: 400;
+    color: var(--main-paragraph);
+    text-align: center;
+    line-height: 25px;
+}
+
+/* ****************** Figures ********************* */
+.main-figures {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 8px;
+
+
+}
+
+
+.chiffre {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--main-heading-stats);
+}
+
+.title {
+    font-size: 0.8em;
+    font-family: "Lexend Deca";
+    text-transform: uppercase;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+@media only screen and (min-width:1000px) {
+    html {
+        max-width: 1440px;
+    }
+
+    body {
+        max-width: 1110px;
+        flex-direction: row-reverse;
+    }
+
+    img,
+    .purple {
+        border-radius: 0 8px 8px 0;
+    }
+
+    main {
+        align-items: flex-start;
+        padding-left: 72px;
+        padding-right: 95px;
+
+    }
+
+    h1,
+    p {
+        text-align: left;
+    }
+
+    .main-figures {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .templates,
+    .queries {
+        margin-left: 63px;
+    }
+
+    h1 {
+        line-height: 1.375em;
+        font-size: 2.4em;
+    }
+}
