@@ -159,7 +159,6 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--main-background);
-    border-radius: 8px;
     margin: 24px;
 }
 
@@ -199,6 +198,7 @@ main {
     align-items: center;
     background-color: var(--card-background);
     width: 50%;
+    border-radius: 0 0 8px 8px;
 
 
 }
@@ -276,6 +276,7 @@ p {
 
     main {
         align-items: flex-start;
+        border-radius: 8px 0 0 8px;
     }
 
     h1,
