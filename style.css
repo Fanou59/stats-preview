@@ -141,6 +141,15 @@ table {
     border-spacing: 0;
 }
 
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
 /* ************************************** CSS project *********************** */
 
 /* *************************** Global ******************** */
@@ -163,19 +172,23 @@ body {
 }
 
 
-/* overlay */
-picture {
+/* picture {
     position: relative;
-    width: 50%;
+    max-width: 50%;
 
-}
+} */
 
 img {
     border-radius: 8px 8px 0 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+
 }
 
-.purple {
+/* .purple {
     background-color: #AB5CDB;
     border-radius: 8px 8px 0 0;
     position: absolute;
@@ -187,7 +200,7 @@ img {
     opacity: 0.8;
 
 
-}
+} */
 
 
 /* ******************* Main and Text ********************* */
@@ -197,8 +210,9 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: var(--card-background);
-    width: 50%;
+    max-width: 50%;
     border-radius: 0 0 8px 8px;
+
 
 
 }
@@ -264,19 +278,24 @@ p {
 @media only screen and (min-width:1110px) {
 
     body {
+        max-width: 1110px;
         flex-direction: row-reverse;
-    }
 
+    }
 
     img,
     .purple {
         border-radius: 0 8px 8px 0;
+        /* min-width: 50%; */
+
 
     }
 
     main {
         align-items: flex-start;
         border-radius: 8px 0 0 8px;
+        /* max-width: 50% */
+
     }
 
     h1,
